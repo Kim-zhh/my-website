@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head><style>
-    .section { border: 2px solid #ff66b2; margin: 10px 0; padding: 10px; }
-    table { width: 100%; border-collapse: collapse; }
-    th { background: #ffccdd; }
-</style></head>
+<head>
+<style>
+    body { 
+        background-color: #ffccdd;
+        /* 精確復刻第一頁的波點格紋 */
+        background-image: radial-gradient(#ff99cc 15%, transparent 15%);
+        background-size: 30px 30px; 
+        padding: 20px; font-family: 'Courier New', monospace; 
+    }
+    .page { width: 900px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 20px; }
+    
+    /* 返回按鈕的古典化設計 */
+    .nav-btn { display: inline-block; padding: 5px 15px; border: 2px outset #ff66b2; background: #fff0f5; text-decoration: none; color: #333; font-weight: bold; margin-bottom: 10px; }
+    
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th { background: #ffccdd; border: 1px solid #ff99cc; padding: 10px; }
+    td { border: 1px solid #ff99cc; padding: 10px; text-align: center; }
+    
+    .img-placeholder { width: 80px; height: 80px; border: 1px dashed #ff99cc; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #ff99cc; }
+    .status-check { transform: scale(1.5); }
+</style>
+</head>
 <body>
-    <h2>✦ SKINCARE_MANAGER ✦</h2>
-    <div class="section">
-        <h3>正在使用 (In-Use)</h3>
-        <table>
-            <tr><th>名稱</th><th>開始日期</th><th>預計過期</th><th>[操作]</th></tr>
-            <tr><td>××× 化妝水</td><td>2026-03-09</td><td>2026-09-09</td><td>移除/減量</td></tr>
-        </table>
+    <div class="page">
+        <h2>✦ SKINCARE_BATTLE_STATION ✦</h2>
+        <a href="index.html" class="nav-btn">« BACK TO SHRINE</a>
+        <a href="closet.html" class="nav-btn">« CLOSET_MENU</a>
+
+        <div class="section">
+            <h3>正在使用 (In-Use)</h3>
+            <table>
+                <tr>
+                    <th>拍照/圖片</th>
+                    <th>名稱 (類別)</th>
+                    <th>使用感受</th>
+                    <th>消耗量</th>
+                    <th>狀態 Check</th>
+                </tr>
+                <tr>
+                    <td class="img-placeholder">上傳圖片</td>
+                    <td>××× 精華液<br>(精華類)</td>
+                    <td><textarea placeholder="寫下感受..."></textarea></td>
+                    <td><input type="text" style="width:50px" placeholder="ml"></td>
+                    <td><input type="checkbox" class="status-check"> 已用完</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <div class="section">
-        <h3>囤貨清單 (Stockpile)</h3>
-        <table>
-            <tr><th>名稱</th><th>購入日期</th><th>保質期至</th><th>[操作]</th></tr>
-            <tr><td>××× 精華液</td><td>2026-02-01</td><td>2028-02-01</td><td>移至使用中</td></tr>
-        </table>
-    </div>
-    <button>+ 新增商品</button>
-    <a href="closet.html">« 返回分類</a>
 </body>
 </html>
