@@ -2,58 +2,47 @@
 <html>
 <head>
 <style>
-    body { background: #ffccdd; padding: 20px; font-family: 'Courier New', monospace; }
+    /* 這裡定義了你要求的粉色格紋背景 */
+    body { 
+        background-color: #ffccdd;
+        background-image: radial-gradient(#ff99cc 15%, transparent 15%);
+        background-size: 20px 20px; 
+        padding: 20px; 
+        font-family: 'Courier New', monospace; 
+    }
     .page-container { width: 900px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 5px; }
-    /* 復刻第三張圖的骨架 */
-    .header-banner { height: 150px; border: 2px solid #ff99cc; background: #fff0f5; margin-bottom: 5px; }
-    .nav-bar-strip { height: 30px; background: #00ccff; border: 1px solid #ff99cc; margin-bottom: 5px; }
+    
+    .header-banner { height: 150px; border: 2px solid #ff99cc; background: #fff0f5; margin-bottom: 10px; }
+    
     .middle-row { display: flex; gap: 5px; margin-bottom: 5px; }
-    .box { border: 2px solid #ff99cc; background: white; padding: 10px; }
+    .box { border: 2px solid #ff99cc; background: #fffafb; padding: 10px; }
+    
+    /* 左側：放置按鈕 */
     .stats-box { width: 220px; }
     .welcome-box { flex: 1; }
     .nav-box { width: 200px; }
-    /* 按鈕樣式 */
-    .btn { display: block; background: #ff99cc; color: white; padding: 10px; margin-top: 10px; text-align: center; border: 2px outset #ff66b2; text-decoration: none; }
+    
+    .btn { display: block; background: #ff99cc; color: white; padding: 10px; margin-top: 10px; text-align: center; border: 2px outset #ff66b2; text-decoration: none; font-weight: bold; }
 </style>
 </head>
 <body>
     <div class="page-container">
-        <div class="header-banner"></div> <div class="vintage-divider">
-    <div class="line"></div>
-    <div class="dot-pattern">✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦</div>
-    <div class="line"></div>
-</div>
-
-<style>
-    /* 新的古典裝飾條樣式 */
-    .vintage-divider {
-        margin: 10px 0;
-        text-align: center;
-        padding: 5px;
-    }
-    .line {
-        height: 1px;
-        background: #ff99cc;
-        margin: 4px 0;
-        border-bottom: 1px dashed #000; /* 加入細緻的黑色裝飾線 */
-    }
-    .dot-pattern {
-        font-size: 12px;
-        color: #ff66b2;
-        letter-spacing: 5px;
-    }
-</style>
+        <div class="header-banner"></div> 
+        
         <div class="middle-row">
-            <div class="box stats-box">STATS_AREA</div>
+            <div class="box stats-box">
+                <h3>MENU</h3>
+                <a href="closet.html" class="btn">✦ BEAUTY_CLOSET ✦</a>
+            </div>
             <div class="box welcome-box">
-                <h3>WELCOME_TO_MY_SHRINE</h3>
-                <p>這裡放置減肥進度或其他資訊...</p>
+                <h3>WEIGHT_LOSS_JOURNEY</h3>
+                <p>××× KG</p>
             </div>
             <div class="box nav-box">
                 <h3>NAVIGATION</h3>
-                <a href="closet.html" class="btn">✦ BEAUTY_CLOSET ✦</a>
             </div>
         </div>
+        
         <div class="middle-row">
             <div class="box stats-box">×××</div>
             <div class="box welcome-box">CHAT_ROOM</div>
