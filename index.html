@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✦ KIM'S CYBER-RETRO LIBRARY ✦</title>
+    <style>
+        /* CSS 樣式定調 */
+        body {
+            background-color: #000000; /* 純黑背景 */
+            color: #d1d5db; /* 淡灰色文字，利於閱讀 */
+            font-family: 'Courier New', monospace; /* 復古等寬字體 */
+            cursor: crosshair; /* 十字準心鼠標 */
+            padding: 20px;
+            background-image: radial-gradient(#1a0033 1px, transparent 1px); /* 暗紫點陣 */
+            background-size: 15px 15px;
+        }
+
+        /* Y2K 視窗風格的 container */
+        .window-container {
+            max-width: 900px;
+            margin: 0 auto;
+            border: 2px solid #a855f7; /* 螢光紫邊框 */
+            background-color: #0d001a; /* 極深紫內容背景 */
+            box-shadow: 5px 5px 0px #5b21b6; /* 經典的硬陰影 */
+        }
+
+        /* 視窗標題欄 */
+        .window-header {
+            background: linear-gradient(90deg, #a855f7 0%, #22d3ee 100%); /* 紫到藍漸層 */
+            color: #000;
+            padding: 5px 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #a855f7;
+        }
+
+        .window-header .controls {
+            letter-spacing: 5px;
+        }
+
+        /* 內容佈局 (側邊欄 + 主內容) */
+        .main-content {
+            display: flex;
+            padding: 15px;
+        }
+
+        /* 側邊導航 (Mimicking image_1/image_2) */
+        nav {
+            width: 180px;
+            border-right: 1px dashed #a855f7;
+            padding-right: 15px;
+        }
+
+        nav h3 {
+            color: #22d3ee; /* 粉藍高亮 */
+            border-bottom: 1px solid #22d3ee;
+            padding-bottom: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: #d8b4fe; /* 淡紫連結 */
+            text-decoration: none;
+            display: block;
+            padding: 3px 5px;
+        }
+
+        nav a:hover {
+            background-color: #a855f7;
+            color: #000;
+        }
+
+        /* 主內容區塊 */
+        main {
+            flex: 1;
+            padding-left: 15px;
+        }
+
+        h1 {
+            color: #f472b6; /* 螢光粉 (模仿參考圖) */
+            text-shadow: 1px 1px 0px #000;
+            text-align: center;
+        }
+
+        .marquee-bar {
+            background: #000;
+            color: #fb7185;
+            padding: 3px;
+            margin: 10px 0;
+            border: 1px dashed #fb7185;
+        }
+
+        .content-box {
+            border: 1px solid #d8b4fe;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: rgba(26, 0, 51, 0.5);
+        }
+
+        /* 像素像素化按鈕 (模仿 image_2) */
+        .pixel-btn {
+            background-color: #22d3ee;
+            color: #000;
+            border: none;
+            padding: 5px 10px;
+            font-family: inherit;
+            margin-right: 5px;
+            cursor: pointer;
+            border-bottom: 2px solid #06b6d4;
+        }
+        .pixel-btn:hover { background-color: #a855f7; border-bottom: 2px solid #7e22ce; color: #fff; }
+
+    </style>
+</head>
+<body>
+
+    <div class="window-container">
+        <div class="window-header">
+            <span>KIM_OS [Establishing SOP...]</span>
+            <span class="controls">_ □ X</span>
+        </div>
+
+        <div class="main-content">
+            <nav>
+                <h3>[ SYSTEM ]</h3>
+                <ul>
+                    <li><a href="#">✦ Index</a></li>
+                    <li><a href="#">✦ Logs</a></li>
+                    <li><a href="#">✦ Status</a></li>
+                </ul>
+                <hr>
+                <h3>[ CARE_SOP ]</h3>
+                <ul>
+                    <li><a href="#">System Care</a></li>
+                    <li><a href="#">Beauty Care</a></li>
+                    <li><a href="#">Foot Care</a></li>
+                </ul>
+            </nav>
+
+            <main>
+                <h1>WELCOME TO MY LIBRARY</h1>
+                <div class="marquee-bar"><marquee>Welcome, Commander. Ready to establish your life SOP. | Current Status: INITIALIZING... ✦</marquee></div>
+
+                <div class="content-box">
+                    <p>我正在這裡建立我的理性 SOP 與知識庫。</p>
+                    <p>融合了 2000 年代的純粹視覺與對未來的賽博想像。</p>
+                </div>
+
+                <div class="content-box" style="margin-top: 20px;">
+                    <button class="pixel-btn">About Me</button>
+                    <button class="pixel-btn">My Cat</button>
+                    <button class="pixel-btn">Inventory</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
