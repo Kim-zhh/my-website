@@ -1,43 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html>
 <head>
-<meta charset="UTF-8">
 <style>
-    body { background-color: #ffdceb; padding: 20px; font-family: 'Verdana', sans-serif; }
-    .wrapper { width: 900px; margin: 0 auto; background: white; border: 3px solid #ff99cc; padding: 10px; }
-    
-    /* 頂部區域 */
-    .banner { height: 160px; border: 2px solid #ff99cc; background: #ffe4f0; margin-bottom: 5px; }
-    .top-strip { height: 30px; background: #ffccdf; border: 1px solid #ff99cc; margin-bottom: 5px; }
-    
-    /* 三欄區塊 */
-    .grid-row { display: flex; gap: 5px; margin-bottom: 5px; }
-    .box { border: 2px solid #ff99cc; background: #fffafb; padding: 10px; }
-    .col-stats { width: 220px; }
-    .col-main { flex: 1; }
-    .col-nav { width: 200px; }
-    
-    /* 下方三欄區塊 */
-    .bottom-row { display: flex; gap: 5px; }
-    .box-bottom { border: 2px solid #ff99cc; background: #fffafb; padding: 10px; }
-    .s-box { width: 220px; }
-    .c-box { flex: 1; }
-    .u-box { width: 200px; }
+    body { background: #ffccdd; padding: 20px; font-family: 'Courier New', monospace; }
+    .page { width: 900px; margin: auto; border: 3px solid #ff99cc; background: #fff0f5; padding: 10px; }
+    .header { height: 120px; border: 2px solid #ff99cc; background: white; margin-bottom: 5px; }
+    .nav-bar { height: 30px; background: #00ccff; border: 1px solid #ff99cc; margin-bottom: 5px; }
+    .content { display: flex; gap: 5px; }
+    .box { border: 2px solid #ff99cc; background: white; padding: 10px; flex: 1; }
+    .btn { display: block; background: #ff99cc; color: white; padding: 10px; text-align: center; border: 2px outset #ff66b2; text-decoration: none; font-weight: bold; }
 </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="banner"></div>
-        <div class="top-strip"></div>
-        <div class="grid-row">
-            <div class="box col-stats">×××</div>
-            <div class="box col-main">×××</div>
-            <div class="box col-nav">×××</div>
-        </div>
-        <div class="bottom-row">
-            <div class="box-bottom s-box">×××</div>
-            <div class="box-bottom c-box">×××</div>
-            <div class="box-bottom u-box">×××</div>
+    <div class="page">
+        <div class="header"></div>
+        <div class="nav-bar"></div>
+        <div class="content">
+            <div class="box">×××</div>
+            <div class="box">
+                <h3>MAIN_AREA</h3>
+                <a href="skincare.html" class="btn">✦ BEAUTY_CLOSET ✦</a>
+            </div>
+            <div class="box">×××</div>
         </div>
     </div>
 </body>
