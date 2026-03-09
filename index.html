@@ -1,43 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
+<meta charset="UTF-8">
 <style>
-    body { background: #ffccdd; padding: 10px; font-family: 'Courier New', monospace; }
-    .page-container { width: 900px; margin: auto; border: 2px solid #ff99cc; background: white; padding: 5px; }
+    body { background-color: #ffdceb; padding: 20px; font-family: 'Verdana', sans-serif; }
+    .wrapper { width: 900px; margin: 0 auto; background: white; border: 3px solid #ff99cc; padding: 10px; }
     
     /* 頂部區域 */
-    .header-banner { height: 120px; border: 1px solid #ff99cc; margin-bottom: 5px; background: #fff0f5; }
-    .nav-bar-strip { height: 25px; background: #ffb3d9; border: 1px solid #ff99cc; margin-bottom: 5px; }
+    .banner { height: 160px; border: 2px solid #ff99cc; background: #ffe4f0; margin-bottom: 5px; }
+    .top-strip { height: 30px; background: #ffccdf; border: 1px solid #ff99cc; margin-bottom: 5px; }
     
-    /* 中間三大區塊 */
-    .middle-row { display: flex; gap: 5px; margin-bottom: 5px; }
-    .box { border: 1px solid #ff99cc; background: #fffaf0; padding: 8px; }
-    .stats-box { width: 220px; }
-    .welcome-box { flex: 1; }
-    .nav-box { width: 200px; }
+    /* 三欄區塊 */
+    .grid-row { display: flex; gap: 5px; margin-bottom: 5px; }
+    .box { border: 2px solid #ff99cc; background: #fffafb; padding: 10px; }
+    .col-stats { width: 220px; }
+    .col-main { flex: 1; }
+    .col-nav { width: 200px; }
     
-    /* 下方區塊 */
+    /* 下方三欄區塊 */
     .bottom-row { display: flex; gap: 5px; }
-    .support-box { width: 220px; }
-    .chat-box { flex: 1; }
-    .updates-box { width: 200px; }
+    .box-bottom { border: 2px solid #ff99cc; background: #fffafb; padding: 10px; }
+    .s-box { width: 220px; }
+    .c-box { flex: 1; }
+    .u-box { width: 200px; }
 </style>
 </head>
 <body>
-    <div class="page-container">
-        <div class="header-banner"></div>
-        <div class="nav-bar-strip"></div>
-        
-        <div class="middle-row">
-            <div class="box stats-box">×××</div>
-            <div class="box welcome-box">×××</div>
-            <div class="box nav-box">×××</div>
+    <div class="wrapper">
+        <div class="banner"></div>
+        <div class="top-strip"></div>
+        <div class="grid-row">
+            <div class="box col-stats">×××</div>
+            <div class="box col-main">×××</div>
+            <div class="box col-nav">×××</div>
         </div>
-        
         <div class="bottom-row">
-            <div class="box support-box">×××</div>
-            <div class="box chat-box">×××</div>
-            <div class="box updates-box">×××</div>
+            <div class="box-bottom s-box">×××</div>
+            <div class="box-bottom c-box">×××</div>
+            <div class="box-bottom u-box">×××</div>
         </div>
     </div>
 </body>
