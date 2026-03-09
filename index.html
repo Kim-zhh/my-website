@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head><style>
-    body { background: #ffccdd; font-family: 'Courier New', monospace; padding: 20px; }
-    .page { width: 900px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 10px; }
-    .grid { display: flex; gap: 10px; }
-    .box { border: 2px solid #ff99cc; padding: 10px; flex: 1; }
-    .btn { display: block; background: #ff99cc; color: white; padding: 10px; margin: 5px 0; text-align: center; text-decoration: none; border: 2px outset #ff66b2; }
-</style></head>
+<head>
+<style>
+    body { background: #ffccdd; padding: 20px; font-family: 'Courier New', monospace; }
+    .page-container { width: 900px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 5px; }
+    /* 復刻第三張圖的骨架 */
+    .header-banner { height: 150px; border: 2px solid #ff99cc; background: #fff0f5; margin-bottom: 5px; }
+    .nav-bar-strip { height: 30px; background: #00ccff; border: 1px solid #ff99cc; margin-bottom: 5px; }
+    .middle-row { display: flex; gap: 5px; margin-bottom: 5px; }
+    .box { border: 2px solid #ff99cc; background: white; padding: 10px; }
+    .stats-box { width: 220px; }
+    .welcome-box { flex: 1; }
+    .nav-box { width: 200px; }
+    /* 按鈕樣式 */
+    .btn { display: block; background: #ff99cc; color: white; padding: 10px; margin-top: 10px; text-align: center; border: 2px outset #ff66b2; text-decoration: none; }
+</style>
+</head>
 <body>
-    <div class="page">
-        <div class="grid">
-            <div class="box">
-                <h3>✦ BEAUTY_CLOSET ✦</h3>
-                <a href="closet.html" class="btn">進入衣櫥</a>
+    <div class="page-container">
+        <div class="header-banner"></div> <div class="nav-bar-strip"></div>
+        <div class="middle-row">
+            <div class="box stats-box">STATS_AREA</div>
+            <div class="box welcome-box">
+                <h3>WELCOME_TO_MY_SHRINE</h3>
+                <p>這裡放置減肥進度或其他資訊...</p>
             </div>
-            <div class="box">
-                <h3>✦ WEIGHT_LOSS ✦</h3>
-                <p>××× KG (目標進度)</p>
+            <div class="box nav-box">
+                <h3>NAVIGATION</h3>
+                <a href="closet.html" class="btn">✦ BEAUTY_CLOSET ✦</a>
             </div>
-            <div class="box"><h3>OTHER</h3></div>
+        </div>
+        <div class="middle-row">
+            <div class="box stats-box">×××</div>
+            <div class="box welcome-box">CHAT_ROOM</div>
+            <div class="box nav-box">UPDATES</div>
         </div>
     </div>
 </body>
