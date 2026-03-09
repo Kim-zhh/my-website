@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-    body { background: #ffccdd; padding: 20px; font-family: 'Courier New', monospace; }
-    .page { width: 900px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 10px; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #ff99cc; padding: 8px; text-align: center; }
-    th { background: #ffccff; }
-    .status-bar { height: 10px; background: #00ccff; width: 80%; }
-</style>
-</head>
+<head><style>
+    .section { border: 2px solid #ff66b2; margin: 10px 0; padding: 10px; }
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #ffccdd; }
+</style></head>
 <body>
-    <div class="page">
-        <h2>✦ BEAUTY_CLOSET // SKINCARE ✦</h2>
-        <a href="index.html">« BACK</a>
+    <h2>✦ SKINCARE_MANAGER ✦</h2>
+    <div class="section">
+        <h3>正在使用 (In-Use)</h3>
         <table>
-            <tr>
-                <th>產品名稱</th>
-                <th>狀態 (已/未開封)</th>
-                <th>保質期至</th>
-                <th>消耗進度</th>
-            </tr>
-            <tr>
-                <td>××× 化妝水</td>
-                <td>已開封</td>
-                <td>2026-12</td>
-                <td><div class="status-bar"></div></td>
-            </tr>
+            <tr><th>名稱</th><th>開始日期</th><th>預計過期</th><th>[操作]</th></tr>
+            <tr><td>××× 化妝水</td><td>2026-03-09</td><td>2026-09-09</td><td>移除/減量</td></tr>
         </table>
     </div>
+    <div class="section">
+        <h3>囤貨清單 (Stockpile)</h3>
+        <table>
+            <tr><th>名稱</th><th>購入日期</th><th>保質期至</th><th>[操作]</th></tr>
+            <tr><td>××× 精華液</td><td>2026-02-01</td><td>2028-02-01</td><td>移至使用中</td></tr>
+        </table>
+    </div>
+    <button>+ 新增商品</button>
+    <a href="closet.html">« 返回分類</a>
 </body>
 </html>
