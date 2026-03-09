@@ -8,87 +8,94 @@
         background-size: 30px 30px; 
         padding: 20px; font-family: 'Courier New', monospace; 
     }
-    .page { width: 950px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 20px; }
-    .nav-btn { display: inline-block; padding: 5px 15px; border: 2px outset #ff66b2; background: #fff0f5; text-decoration: none; color: #333; margin-bottom: 10px; }
+    .page { width: 1000px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 20px; box-shadow: 10px 10px 0px #ffb3d9; }
+    .nav-btn { display: inline-block; padding: 5px 15px; border: 2px outset #ff66b2; background: #fff0f5; text-decoration: none; color: #333; margin-bottom: 15px; }
     
     .section { border: 2px solid #ff99cc; margin-bottom: 25px; padding: 15px; background: #fffafb; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px; }
     th { background: #ffccdd; border: 1px solid #ff99cc; padding: 8px; }
     td { border: 1px solid #ff99cc; padding: 8px; text-align: center; }
     
-    input, textarea, select { border: 1px solid #ff99cc; padding: 3px; width: 90%; }
-    .status-check { transform: scale(1.2); }
+    /* 裝備圖片格 */
+    .item-img { width: 60px; height: 60px; border: 1px dashed #ff99cc; background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .item-img img { max-width: 100%; max-height: 100%; }
+
+    input, textarea, select { border: 1px solid #ff99cc; padding: 3px; width: 90%; background: #fff; }
 </style>
 </head>
 <body>
     <div class="page">
-        <h2>✦ SKINCARE_BATTLE_STATION ✦</h2>
-        <a href="index.html" class="nav-btn">« BACK TO SHRINE</a>
+        <h2>✦ SKINCARE_QUEST_LOG ✦</h2>
+        <a href="index.html" class="nav-btn">« 返回神殿首頁</a>
 
         <div class="section">
-            <h3>⚔️ 正在使用 (In-Use)</h3>
+            <h3>⚔️ 裝備中 (In-Use)</h3>
             <table>
                 <tr>
-                    <th>圖片</th>
+                    <th>裝備圖</th>
                     <th>名稱/類別</th>
-                    <th>主要成分</th>
-                    <th>主要功效 (美白/維穩等)</th>
-                    <th>開始日期</th>
-                    <th>消耗量(ml)</th>
-                    <th>使用感受 (後期填寫)</th>
+                    <th>核心成分</th>
+                    <th>主打功效</th>
+                    <th>氣味/質地</th>
+                    <th>初次印象評分</th>
+                    <th>使用感受 (後期)</th>
                 </tr>
                 <tr>
-                    <td>[圖]</td>
-                    <td>××× 水乳</td>
-                    <td><input type="text" placeholder="如：煙酰胺"></td>
-                    <td><input type="text" placeholder="如：提亮"></td>
-                    <td>2026-03-10</td>
-                    <td><input type="text" style="width:40px"></td>
+                    <td><div class="item-img">📸</div></td>
+                    <td>××× 精華</td>
+                    <td><input type="text" placeholder="維C/A醇"></td>
+                    <td><input type="text" placeholder="抗氧/緊致"></td>
+                    <td><input type="text" placeholder="淡淡柑橘味"></td>
+                    <td>⭐⭐⭐⭐⭐</td>
                     <td><textarea rows="1"></textarea></td>
                 </tr>
             </table>
         </div>
 
         <div class="section">
-            <h3>📦 囤貨庫存 (Stockpile)</h3>
+            <h3>📦 囤貨清單 (Stockpile)</h3>
             <table>
                 <tr>
-                    <th>圖片</th>
+                    <th>裝備圖</th>
                     <th>名稱</th>
-                    <th>有效期至</th>
-                    <th>購入理由</th>
-                    <th>[操作]</th>
+                    <th>總量 (ml/g)</th>
+                    <th>保質期</th>
+                    <th>入手渠道/原因</th>
+                    <th>狀態切換</th>
                 </tr>
                 <tr>
-                    <td>[圖]</td>
-                    <td>××× 面霜</td>
-                    <td>2028-05</td>
-                    <td>折扣囤貨</td>
-                    <td><button>移至使用中</button></td>
+                    <td><div class="item-img">📦</div></td>
+                    <td>防曬乳</td>
+                    <td><input type="number" style="width:50px"> ml</td>
+                    <td>2027-10</td>
+                    <td><input type="text"></td>
+                    <td><button>開始使用</button></td>
                 </tr>
             </table>
         </div>
 
         <div class="section">
-            <h3>🏆 使用完成 (Finished)</h3>
+            <h3>🏆 戰利品總結 (Finished)</h3>
             <table>
                 <tr>
                     <th>名稱</th>
-                    <th>效果總結</th>
+                    <th>總消耗量</th>
+                    <th>空瓶耗時</th>
                     <th>是否回購</th>
-                    <th>綜合評價</th>
+                    <th>最終經驗心得 (避雷/推薦)</th>
                 </tr>
                 <tr>
-                    <td>舊的精華液</td>
-                    <td>效果明顯/無功無過</td>
+                    <td>舊面霜</td>
+                    <td>50 ml</td>
+                    <td>45 天</td>
                     <td>
                         <select>
-                            <option>會回購</option>
-                            <option>考慮中</option>
-                            <option>絕不回購</option>
+                            <option>回購 (神作)</option>
+                            <option>無功無過</option>
+                            <option>雷品 (不再見)</option>
                         </select>
                     </td>
-                    <td>✦✦✦✦✧</td>
+                    <td><textarea rows="1"></textarea></td>
                 </tr>
             </table>
         </div>
