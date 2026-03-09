@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-    body { background: #ffccdd; padding: 20px; font-family: 'Courier New', monospace; }
-    .page { width: 900px; margin: auto; border: 3px solid #ff99cc; background: #fff0f5; padding: 10px; }
-    .header { height: 120px; border: 2px solid #ff99cc; background: white; margin-bottom: 5px; }
-    .nav-bar { height: 30px; background: #00ccff; border: 1px solid #ff99cc; margin-bottom: 5px; }
-    .content { display: flex; gap: 5px; }
-    .box { border: 2px solid #ff99cc; background: white; padding: 10px; flex: 1; }
-    .btn { display: block; background: #ff99cc; color: white; padding: 10px; text-align: center; border: 2px outset #ff66b2; text-decoration: none; font-weight: bold; }
-</style>
-</head>
+<head><style>
+    body { background: #ffccdd; font-family: 'Courier New', monospace; padding: 20px; }
+    .page { width: 900px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 10px; }
+    .grid { display: flex; gap: 10px; }
+    .box { border: 2px solid #ff99cc; padding: 10px; flex: 1; }
+    .btn { display: block; background: #ff99cc; color: white; padding: 10px; margin: 5px 0; text-align: center; text-decoration: none; border: 2px outset #ff66b2; }
+</style></head>
 <body>
     <div class="page">
-        <div class="header"></div>
-        <div class="nav-bar"></div>
-        <div class="content">
-            <div class="box">×××</div>
+        <div class="grid">
             <div class="box">
-                <h3>MAIN_AREA</h3>
-                <a href="skincare.html" class="btn">✦ BEAUTY_CLOSET ✦</a>
+                <h3>✦ BEAUTY_CLOSET ✦</h3>
+                <a href="closet.html" class="btn">進入衣櫥</a>
             </div>
-            <div class="box">×××</div>
+            <div class="box">
+                <h3>✦ WEIGHT_LOSS ✦</h3>
+                <p>××× KG (目標進度)</p>
+            </div>
+            <div class="box"><h3>OTHER</h3></div>
         </div>
     </div>
 </body>
