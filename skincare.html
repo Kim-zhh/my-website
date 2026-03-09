@@ -4,46 +4,91 @@
 <style>
     body { 
         background-color: #ffccdd;
-        /* 精確復刻第一頁的波點格紋 */
         background-image: radial-gradient(#ff99cc 15%, transparent 15%);
         background-size: 30px 30px; 
         padding: 20px; font-family: 'Courier New', monospace; 
     }
-    .page { width: 900px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 20px; }
+    .page { width: 950px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 20px; }
+    .nav-btn { display: inline-block; padding: 5px 15px; border: 2px outset #ff66b2; background: #fff0f5; text-decoration: none; color: #333; margin-bottom: 10px; }
     
-    /* 返回按鈕的古典化設計 */
-    .nav-btn { display: inline-block; padding: 5px 15px; border: 2px outset #ff66b2; background: #fff0f5; text-decoration: none; color: #333; font-weight: bold; margin-bottom: 10px; }
+    .section { border: 2px solid #ff99cc; margin-bottom: 25px; padding: 15px; background: #fffafb; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+    th { background: #ffccdd; border: 1px solid #ff99cc; padding: 8px; }
+    td { border: 1px solid #ff99cc; padding: 8px; text-align: center; }
     
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th { background: #ffccdd; border: 1px solid #ff99cc; padding: 10px; }
-    td { border: 1px solid #ff99cc; padding: 10px; text-align: center; }
-    
-    .img-placeholder { width: 80px; height: 80px; border: 1px dashed #ff99cc; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #ff99cc; }
-    .status-check { transform: scale(1.5); }
+    input, textarea, select { border: 1px solid #ff99cc; padding: 3px; width: 90%; }
+    .status-check { transform: scale(1.2); }
 </style>
 </head>
 <body>
     <div class="page">
         <h2>✦ SKINCARE_BATTLE_STATION ✦</h2>
         <a href="index.html" class="nav-btn">« BACK TO SHRINE</a>
-        <a href="closet.html" class="nav-btn">« CLOSET_MENU</a>
 
         <div class="section">
-            <h3>正在使用 (In-Use)</h3>
+            <h3>⚔️ 正在使用 (In-Use)</h3>
             <table>
                 <tr>
-                    <th>拍照/圖片</th>
-                    <th>名稱 (類別)</th>
-                    <th>使用感受</th>
-                    <th>消耗量</th>
-                    <th>狀態 Check</th>
+                    <th>圖片</th>
+                    <th>名稱/類別</th>
+                    <th>主要成分</th>
+                    <th>主要功效 (美白/維穩等)</th>
+                    <th>開始日期</th>
+                    <th>消耗量(ml)</th>
+                    <th>使用感受 (後期填寫)</th>
                 </tr>
                 <tr>
-                    <td class="img-placeholder">上傳圖片</td>
-                    <td>××× 精華液<br>(精華類)</td>
-                    <td><textarea placeholder="寫下感受..."></textarea></td>
-                    <td><input type="text" style="width:50px" placeholder="ml"></td>
-                    <td><input type="checkbox" class="status-check"> 已用完</td>
+                    <td>[圖]</td>
+                    <td>××× 水乳</td>
+                    <td><input type="text" placeholder="如：煙酰胺"></td>
+                    <td><input type="text" placeholder="如：提亮"></td>
+                    <td>2026-03-10</td>
+                    <td><input type="text" style="width:40px"></td>
+                    <td><textarea rows="1"></textarea></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>📦 囤貨庫存 (Stockpile)</h3>
+            <table>
+                <tr>
+                    <th>圖片</th>
+                    <th>名稱</th>
+                    <th>有效期至</th>
+                    <th>購入理由</th>
+                    <th>[操作]</th>
+                </tr>
+                <tr>
+                    <td>[圖]</td>
+                    <td>××× 面霜</td>
+                    <td>2028-05</td>
+                    <td>折扣囤貨</td>
+                    <td><button>移至使用中</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>🏆 使用完成 (Finished)</h3>
+            <table>
+                <tr>
+                    <th>名稱</th>
+                    <th>效果總結</th>
+                    <th>是否回購</th>
+                    <th>綜合評價</th>
+                </tr>
+                <tr>
+                    <td>舊的精華液</td>
+                    <td>效果明顯/無功無過</td>
+                    <td>
+                        <select>
+                            <option>會回購</option>
+                            <option>考慮中</option>
+                            <option>絕不回購</option>
+                        </select>
+                    </td>
+                    <td>✦✦✦✦✧</td>
                 </tr>
             </table>
         </div>
