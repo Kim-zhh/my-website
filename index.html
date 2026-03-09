@@ -1,37 +1,35 @@
-  <!DOCTYPE html>
-<html lang="zh-TW">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>KIM'S SPACE</title>
-    <style>
-        body { background: #ffc0cb; font-family: sans-serif; margin: 0; padding: 10px; }
-        .main-container { width: 800px; margin: 0 auto; border: 2px solid #ff69b4; background: white; padding: 10px; }
-        /* 中間導航條：復刻第五張圖的藍色風格 */
-        .nav-bar { background: linear-gradient(to right, #00bfff, #87cefa); padding: 10px; text-align: center; color: white; font-weight: bold; margin: 10px 0; border: 1px solid #000; }
-        .content-grid { display: flex; gap: 10px; }
-        .box { border: 1px solid #ff69b4; padding: 10px; background: #fff0f5; }
-        .side { width: 200px; }
-        .main { flex: 1; }
-        .update-box { margin-top: 10px; border: 1px solid #00bfff; padding: 10px; }
-    </style>
+<style>
+    body { background: #ffcce5; padding: 20px; font-family: Arial, sans-serif; }
+    .container { width: 900px; margin: auto; border: 2px solid #ff99cc; background: white; padding: 10px; }
+    .banner { height: 150px; background: #ffb3d9; border: 2px solid #ff99cc; margin-bottom: 10px; }
+    .nav-strip { height: 30px; background: #00ccff; border: 1px solid #000; margin-bottom: 10px; }
+    .main-layout { display: flex; gap: 10px; }
+    .box { border: 2px solid #ff99cc; padding: 10px; background: #fff0f5; }
+    .stats { width: 200px; }
+    .welcome { flex: 1; }
+    .nav { width: 200px; }
+    .bottom-row { display: flex; gap: 10px; margin-top: 10px; }
+    .support { width: 200px; }
+    .chat { flex: 1; }
+    .updates { width: 200px; }
+</style>
 </head>
 <body>
-    <div class="main-container">
-        <div class="nav-bar">××× ××× ×××</div>
-        
-        <div class="content-grid">
-            <div class="side box">
-                <h3>×××</h3>
-                <p>×××<br>×××</p>
-            </div>
-            <div class="main box">
-                <h3>×××</h3>
-                <p>×××<br>×××<br>×××</p>
-            </div>
+    <div class="container">
+        <div class="banner"></div>
+        <div class="nav-strip"></div>
+        <div class="main-layout">
+            <div class="box stats">×××</div>
+            <div class="box welcome">×××</div>
+            <div class="box nav">×××</div>
         </div>
-        
-        <div class="update-box">
-            <p>×××<br>×××</p>
+        <div class="bottom-row">
+            <div class="box support">×××</div>
+            <div class="box chat">×××</div>
+            <div class="box updates">×××</div>
         </div>
     </div>
 </body>
