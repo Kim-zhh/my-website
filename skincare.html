@@ -8,77 +8,110 @@
         background-size: 30px 30px; 
         padding: 20px; font-family: 'Courier New', monospace; 
     }
-    .page { width: 1000px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 20px; box-shadow: 10px 10px 0px #ffb3d9; }
+    .page { width: 1000px; margin: auto; border: 3px solid #ff99cc; background: white; padding: 20px; box-shadow: 10px 10px 0px #ffb3d9; position: relative; }
+    
+    /* 遊戲化彈窗樣式 */
+    #customModal {
+        display: none;
+        position: fixed;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+        background: #fff0f5;
+        border: 4px solid #ff66b2;
+        padding: 20px;
+        z-index: 1000;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(255, 192, 203, 0.5);
+        z-index: 999;
+    }
+    .modal-header { color: #ff66b2; font-weight: bold; border-bottom: 2px dashed #ff66b2; margin-bottom: 15px; }
+    .modal-input { width: 100%; margin: 10px 0; padding: 5px; border: 1px solid #ff99cc; display: block; }
+    
+    /* 表格樣式 */
     .section { border: 2px solid #ff99cc; margin-bottom: 25px; padding: 15px; background: #fffafb; }
     table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px; }
     th { background: #ffccdd; border: 1px solid #ff99cc; padding: 8px; }
     td { border: 1px solid #ff99cc; padding: 8px; text-align: center; }
-    .btn-action { cursor: pointer; background: #ff99cc; color: white; border: 1px outset #ff66b2; padding: 2px 8px; font-size: 10px; }
-    .btn-add { background: #00ccff; padding: 10px; color: white; border: none; cursor: pointer; margin-bottom: 10px; font-weight: bold; }
+    .btn-action { cursor: pointer; background: #ff99cc; color: white; border: 2px outset #ff66b2; padding: 2px 8px; }
 </style>
 </head>
 <body>
+
+    <div id="overlay" class="modal-overlay"></div>
+    <div id="customModal">
+        <div class="modal-header">✦ 獲得新裝備 (NEW ITEM) ✦</div>
+        <input type="text" id="newName" class="modal-input" placeholder="產品名稱">
+        <input type="text" id="newSize" class="modal-input" placeholder="容量 (例如: 30ml)">
+        <input type="date" id="newDate" class="modal-input" placeholder="保質期">
+        <button class="btn-action" onclick="saveNewItem()">確認添加</button>
+        <button class="btn-action" onclick="closeModal()" style="background:#aaa; border-color:#888;">取消</button>
+    </div>
+
     <div class="page">
         <h2>✦ SKINCARE_QUEST_LOG ✦</h2>
-        <button class="btn-add" onclick="addItem()">+ 獲得新物品 (添加囤貨)</button>
+        <button class="btn-action" style="padding:10px;" onclick="openModal()">+ 添加新囤貨</button>
         <a href="index.html" style="float:right; text-decoration:none;">« 返回首頁</a>
-
-        <div class="section">
-            <h3>⚔️ 裝備中 (In-Use)</h3>
-            <table id="inUseTable">
-                <tr><th>名稱</th><th>主打功效</th><th>氣味/質地</th><th>操作</th></tr>
-                </table>
-        </div>
 
         <div class="section">
             <h3>📦 囤貨清單 (Stockpile)</h3>
             <table id="stockTable">
-                <tr><th>名稱</th><th>總量(ml)</th><th>保質期</th><th>操作</th></tr>
-                <tr id="item-0">
-                    <td>範例精華液</td>
-                    <td>30ml</td>
-                    <td>2027-12</td>
-                    <td><button class="btn-action" onclick="moveToUse('item-0', '範例精華液')">開始使用</button></td>
-                </tr>
+                <tr><th>名稱</th><th>容量</th><th>保質期</th><th>操作</th></tr>
             </table>
         </div>
 
         <div class="section">
-            <h3>🏆 戰利品總結 (Finished)</h3>
-            <table id="finishTable">
-                <tr><th>名稱</th><th>最終評價</th><th>操作</th></tr>
+            <h3>⚔️ 裝備中 (In-Use)</h3>
+            <table id="inUseTable">
+                <tr><th>名稱</th><th>容量</th><th>開始使用</th><th>操作</th></tr>
             </table>
         </div>
     </div>
 
     <script>
-        // 添加物品到囤貨區
-        function addItem() {
-            let name = prompt("請輸入護膚品名稱:");
-            if (!name) return;
+        function openModal() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('customModal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('customModal').style.display = 'none';
+        }
+        function saveNewItem() {
+            let name = document.getElementById('newName').value;
+            let size = document.getElementById('newSize').value;
+            let date = document.getElementById('newDate').value;
+            
+            if (!name) return alert("請輸入名稱！");
+
             let id = "item-" + Date.now();
             let table = document.getElementById("stockTable");
             let row = table.insertRow(-1);
             row.id = id;
-            row.innerHTML = `<td>${name}</td><td>--</td><td>--</td><td><button class="btn-action" onclick="moveToUse('${id}', '${name}')">開始使用</button></td>`;
+            row.innerHTML = `<td>${name}</td><td>${size}</td><td>${date}</td>
+                <td><button class="btn-action" onclick="moveToUse('${id}', '${name}', '${size}')">開始使用</button></td>`;
+            
+            closeModal();
+            // 清空輸入框
+            document.getElementById('newName').value = '';
+            document.getElementById('newSize').value = '';
+            document.getElementById('newDate').value = '';
         }
 
-        // 從囤貨移至使用中
-        function moveToUse(id, name) {
+        function moveToUse(id, name, size) {
             document.getElementById(id).remove();
             let table = document.getElementById("inUseTable");
             let row = table.insertRow(-1);
             row.id = id;
-            row.innerHTML = `<td>${name}</td><td>待填寫</td><td>待填寫</td><td><button class="btn-action" onclick="moveToFinish('${id}', '${name}')">用完了!</button></td>`;
-        }
-
-        // 從使用中移至完成區
-        function moveToFinish(id, name) {
-            document.getElementById(id).remove();
-            let table = document.getElementById("finishTable");
-            let row = table.insertRow(-1);
-            row.id = id;
-            row.innerHTML = `<td>${name}</td><td>待評價</td><td><button class="btn-action" onclick="this.parentElement.parentElement.remove()">徹底刪除紀錄</button></td>`;
+            let today = new Date().toISOString().split('T')[0];
+            row.innerHTML = `<td>${name}</td><td>${size}</td><td>${today}</td>
+                <td><button class="btn-action" onclick="this.parentElement.parentElement.remove()">用完了/結案</button></td>`;
         }
     </script>
 </body>
