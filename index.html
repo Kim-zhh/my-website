@@ -2,34 +2,42 @@
 <html>
 <head>
 <style>
-    body { background: #ffcce5; padding: 20px; font-family: Arial, sans-serif; }
-    .container { width: 900px; margin: auto; border: 2px solid #ff99cc; background: white; padding: 10px; }
-    .banner { height: 150px; background: #ffb3d9; border: 2px solid #ff99cc; margin-bottom: 10px; }
-    .nav-strip { height: 30px; background: #00ccff; border: 1px solid #000; margin-bottom: 10px; }
-    .main-layout { display: flex; gap: 10px; }
-    .box { border: 2px solid #ff99cc; padding: 10px; background: #fff0f5; }
-    .stats { width: 200px; }
-    .welcome { flex: 1; }
-    .nav { width: 200px; }
-    .bottom-row { display: flex; gap: 10px; margin-top: 10px; }
-    .support { width: 200px; }
-    .chat { flex: 1; }
-    .updates { width: 200px; }
+    body { background: #ffccdd; padding: 10px; font-family: 'Courier New', monospace; }
+    .page-container { width: 900px; margin: auto; border: 2px solid #ff99cc; background: white; padding: 5px; }
+    
+    /* 頂部區域 */
+    .header-banner { height: 120px; border: 1px solid #ff99cc; margin-bottom: 5px; background: #fff0f5; }
+    .nav-bar-strip { height: 25px; background: #ffb3d9; border: 1px solid #ff99cc; margin-bottom: 5px; }
+    
+    /* 中間三大區塊 */
+    .middle-row { display: flex; gap: 5px; margin-bottom: 5px; }
+    .box { border: 1px solid #ff99cc; background: #fffaf0; padding: 8px; }
+    .stats-box { width: 220px; }
+    .welcome-box { flex: 1; }
+    .nav-box { width: 200px; }
+    
+    /* 下方區塊 */
+    .bottom-row { display: flex; gap: 5px; }
+    .support-box { width: 220px; }
+    .chat-box { flex: 1; }
+    .updates-box { width: 200px; }
 </style>
 </head>
 <body>
-    <div class="container">
-        <div class="banner"></div>
-        <div class="nav-strip"></div>
-        <div class="main-layout">
-            <div class="box stats">×××</div>
-            <div class="box welcome">×××</div>
-            <div class="box nav">×××</div>
+    <div class="page-container">
+        <div class="header-banner"></div>
+        <div class="nav-bar-strip"></div>
+        
+        <div class="middle-row">
+            <div class="box stats-box">×××</div>
+            <div class="box welcome-box">×××</div>
+            <div class="box nav-box">×××</div>
         </div>
+        
         <div class="bottom-row">
-            <div class="box support">×××</div>
-            <div class="box chat">×××</div>
-            <div class="box updates">×××</div>
+            <div class="box support-box">×××</div>
+            <div class="box chat-box">×××</div>
+            <div class="box updates-box">×××</div>
         </div>
     </div>
 </body>
